@@ -1,29 +1,58 @@
 # Textklassifizierung - Topic Modeling
 ## Bachelorarbeit 2023
 
-Dieses Code Repository enthält den kompletten Code, der im Rahmen der Bachelorarbeit entwickelt wurde. Er besteht aus mehreren Jupyter-Notebooks, die im Unterordner "code" zu finden sind.
+Dies ist ein Repository, welches im Rahmen der Bachelorarbeit "Ontologie-basierte Schlagwortextraktion zur Verbesserung des Korpus für die automatische Dokumentklassifizierung des Discovery Services LIVIVO von ZB MED" entwickelt wurde. Es besteht aus mehreren Jupyter-Notebooks auf Basis der Programmiersprache Python, sowie aus PostgreSQL-Befehlen, die im Unterordner "code" zu finden sind. Die Datengrundlage besteht aus einer Datenbank, die mehrere Millionen Publikationen aus LIVIVO enthält.
 
-Im folgenden erfolgt eine Beschreibug, um die Ergebnisse und Visualisierungen in der Bachelorarbeit zu reproduzieren.
+Im folgenden erfolgt eine Beschreibung der THematik, sowie der Code-Dateien, um die Ergebnisse und Visualisierungen in der Bachelorarbeit reproduzieren zu können.
 
-1. Beschreibung Thematik
-2. Beschreibung Code
+1. [Beschreibung Thematik](#beschr)
+2. [Ordnerstruktur](#ordner) 
+3. [Datenquellen](#quellen)
+4. [Durchführung](#run) 
+5. [Beschreibung Code](#beschreibung-code)
 
+<br>
+<br>
 
-# Beschreibung 
-Im Rahmen der Bachelorarbeit wurde ein Datenset von verschiedenen Publikationen der ZB MED für ein Topic Modeling aufbereitet. Die einzelnen Dokumente sollen in ihre T
+# [Beschreibung](#beschr) 
+Das Haupthema der Bachelorarbeit ist es, den Datensatz für eine Textklassifizierung aufzubereiten. Das Ziel besteht darin, die Publikationen in ihre Thematiken einzuordnen.
+Die Aufbereitungsschritte bestehen aus folgenden Schritten:
 
-- Textklassifizierung der Publikationen in ihre Themen
-- Optimierungen von Aufbereitungsschritten
-- 
+- Spracherkennung der Publikationen
+- Aufbereiten eines Thesaurus im RDF-Format zu einem Nachschlage-Wörterbuch
+- Schlagwortextraktion mittels der Terme im Nachschlage-Wörterbuch
 
+<br>
+<br>
 
+# [Ordnerstruktur](#ordner) 
 
-# Beschreibung Code
+- code: beinhaltet alle Code-Dateien, die mit der run.sh-Datei ausgeführt werden kann
+- data: ?
+- diagrams: ?
+- further analysis: beinhaltet Code-Dateien für Analysezwecke und Experimente
+    - comparison: Vergleiche mit Benchmark 
+    - experiments: Klassifizierung LDA mit 5 Klassen, Evaluation der Schlagwortextraktion
+    - visualization: Visualisierungen
+<br>
+<br>
 
-### Vorbereitung
+# [Datenquellen](#quellen) 
 
-In nachfolgender Tabelle sind eventuelle notwendige Anpassungen im Code beschrieben.
+- Datei AGROVOC-Thesaurus: https://data.apps.fao.org/catalog/dcat/agrovoc-2023-07 
+- Repository keyword extraction: https://github.com/klauslippert/keyword_extraction  
 
+<br>
+<br>
+
+# [Durchführung](#run)
+Um den Code als Bash auszuführen, 
+
+<br>
+<br>
+
+# [Beschreibung Code](#beschreibung-code)
+Die folgende Tabelle beschreibt die Funktionen der einzelnen Dateien und die gegebenenfalls erforderlichen Anpassungen im Code.
 
 <table>
     <thead>
@@ -127,10 +156,26 @@ In nachfolgender Tabelle sind eventuelle notwendige Anpassungen im Code beschrie
         <tr>
             <td rowspan=1 align="center">12.1_classification_LDA</td>
             <td rowspan=1 align="center">Durchführung der Klassifizierung mittels LDA</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
+            <td align="center">Anpassung Pfad für Speicherung des Dataframes als csv</td>
+            <td align="center">save_path</td>
             <td align="center">corpus_keywords_agro, corpus_keywords_mesh, Averbis-Klassen</td>
-            <td align="center">Dataframe mit den vorhergesagten Klassen für die Dokumente</td>
+            <td align="center">Dataframe, welches die vorhergesagten Klassen der Dokumente beinhaltet</td>
+        </tr>
+        <tr>
+            <td rowspan=1 align="center">12.2_eval_LDA</td>
+            <td rowspan=1 align="center">Evaluierung der LDA mittels F1-Score</td>
+            <td align="center">Anpassung Pfad für Öffnen des Dataframes als csv</td>
+            <td align="center">path</td>
+            <td align="center">Dataframe der vorhergesagten LDA-Klassen</td>
+            <td align="center">Evaluierungswert in Form des F1-Scores</td>
+        </tr>
+        <tr>
+            <td rowspan=1 align="center">13_classification_SGD</td>
+            <td rowspan=1 align="center">Durchführung der Klassifizierung mittels SGDC</td>
+            <td align="center">Anpassung Pfad für Speichern der F1-Matrix als csv</td>
+            <td align="center">path</td>
+            <td align="center">corpus_keywords_agro, corpus_keywords_mesh, Averbis-Klassen</td>
+            <td align="center">Evaluierungswerte in Form der F1-Matrix</td>
         </tr>
   
 </table>
