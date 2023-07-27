@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #change to directory containing the code
-cd /code
+echo -e "change directory to /code"
+cd code
 
 
-
-function prepare_data () {
+function prepare_data {
     echo "$1" "create dataset on db" # arguments are accessible through $1, $2,...
-    python 01_create_dataset.ipynb 
+    python 01_create_dataset_copy.ipynb 
 }
 
 
