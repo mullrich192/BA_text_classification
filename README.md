@@ -1,14 +1,14 @@
 # Textklassifizierung - Topic Modeling
 ## Bachelorarbeit 2023
 
-Dies ist ein Repository, welches im Rahmen der Bachelorarbeit "Ontologie-basierte Schlagwortextraktion zur Verbesserung des Korpus für die automatische Dokumentklassifizierung des Discovery Services LIVIVO von ZB MED" entwickelt wurde. Es besteht aus mehreren Jupyter-Notebooks auf Basis der Programmiersprache Python, sowie aus PostgreSQL-Befehlen, die im Unterordner "code" zu finden sind. Die Datengrundlage besteht aus einer Datenbank, die mehrere Millionen Publikationen aus LIVIVO enthält.
+Dies ist ein Repository, welches im Rahmen der Bachelorarbeit "Ontologie-basierte Schlagwortextraktion zur Verbesserung des Korpus für die automatische Dokumentklassifizierung des Discovery Services LIVIVO von ZB MED" entwickelt wurde. Es besteht aus mehreren Jupyter-Notebooks auf Basis der Programmiersprache Python, sowie aus PostgreSQL-Befehlen, die im Unterordner "code" zu finden sind. Die Datengrundlage besteht aus einer Datenbank, die mehrere Millionen Publikationen aus LIVIVO enthält und wurde für diese Arbeit zur Verfügung gestellt.
 
-Im folgenden erfolgt eine Beschreibung der THematik, sowie der Code-Dateien, um die Ergebnisse und Visualisierungen in der Bachelorarbeit reproduzieren zu können.
+Im folgenden erfolgt eine Beschreibung der Thematik, sowie der Code-Dateien, um die Ergebnisse und Visualisierungen in der Bachelorarbeit reproduzieren zu können.
 
-1. [Beschreibung Thematik](#beschr)
-2. [Ordnerstruktur](#ordner) 
-3. [Datenquellen](#quellen)
-4. [Durchführung](#run) 
+1. [Beschreibung Thematik](#beschreibung)
+2. [Ordnerstruktur](#ordnerstruktur) 
+3. [Datenquellen](#datenquellen)
+4. [Durchführung](#durchführung) 
 5. [Beschreibung Code](#beschreibung-code)
 
 <br>
