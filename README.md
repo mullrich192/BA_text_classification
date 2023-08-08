@@ -82,7 +82,7 @@ Die folgende Tabelle beschreibt die Funktionen der einzelnen Dateien und die geg
             <td align="center"> Mit dieser Variable wird ein Limit der Datensätze gesetzt</td>
             <td rowspan=1 align="center">lim</td>
              <td rowspan=2 align="center">Rohdaten (ba_corpus_2)</td>
-             <td rowspan=2 align="center"> corpus_small</td>
+             <td rowspan=2 align="center"> corpus_small_train</td>
         </tr>
         <tr>
             <td align="center">In den Datensätzen kann zwischen einem Trainingsdatenset und ein Datenset, welches die MeSH-Termini von Averbis beinhaltet, unterschieden werden. Hierzu wird die Angabe als Typ mitgegeben. </td>
@@ -93,7 +93,7 @@ Die folgende Tabelle beschreibt die Funktionen der einzelnen Dateien und die geg
             <td align="center">Mit diesem Code wird eine Spracherkennung der Dokumente im Korpus durchgeführt.</td>
             <td align="center">-</td>
             <td align="center">-</td>
-            <td align="center">corpus_small</td>
+            <td align="center">corpus_small_train</td>
             <td align="center">corpus_language</td>
         </tr>
         <tr>
@@ -101,7 +101,7 @@ Die folgende Tabelle beschreibt die Funktionen der einzelnen Dateien und die geg
             <td align="center">Mit diesem PostqreSQL-Befehl wird die Tabelle der Sprachen-Zuordnung mit dem Trainigskorpus verbunden.</td>
             <td align="center">-</td>
             <td align="center">-</td>
-            <td align="center">corpus_small, corpus_language</td>
+            <td align="center">corpus_small_train, corpus_language</td>
             <td align="center">join_language</td>
         </tr>
         <tr>
