@@ -53,6 +53,7 @@ Um die requirements.txt innerhalb der virtuellen Umgebung zu installieren, sollt
 pip install requirements.txt
 ```
 Nach Installation der benötigten Bibliotheken kann die run.sh-Datei im Terminal aufgerufen werden, um die Dateien im Unterordner "code" auszuführen.
+Vorraussetzung für das erfolgreiche Durchführen des Skripts ist eine leere Datenbank mit den Schemen "ke_stage" & "publ".
 ```bash
 sh run.sh
 ```
